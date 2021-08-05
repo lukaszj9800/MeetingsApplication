@@ -5,7 +5,7 @@
 Meetings full stack application created by using Spring and Angular. It allows logged in user to chceck and join to available events and to create their own events.
 
 # Login page
-<img src = "https://github.com/DominikGazda/LibraryApp/blob/master/images/main.png" />
+<img src = "https://github.com/lukaszj9800/MeetingsApplication/blob/main/images/login_page.png" />
 
 
 # Main page
