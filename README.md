@@ -16,8 +16,8 @@ Meetings full stack application created by using Spring and Angular. It allows l
 * Click on "Config" to change currently logged in user data
 <img src = "https://github.com/lukaszj9800/MeetingsApplication/blob/main/images/main_page.png" />
 
-# Book details page
-<img src = "https://github.com/DominikGazda/LibraryApp/blob/master/images/book-details.png" />
+# Event details page
+<img src = "https://github.com/lukaszj9800/MeetingsApplication/blob/main/images/events_details_page.png" />
 
 # Author page
 ## Features
@@ -47,42 +47,3 @@ Project is created with:
 * JUnit 5.6.0
 * Mockito 3.4.4
 * H2 Database
-	
-## Setup
-To run this project, install it locally using npm:
-
-1. Download or Clone project:
-```
-https://github.com/DominikGazda/LibraryApp.git
-```
-2. Import project as maven
-```
-Import -> Import as Maven project
-```
-3. Run LibraryApplication.class
-4. Go to url below (application is using embedded server)
-```
-http://localhost:8080/
-```
-5. To check database go to url below
-```
-http://localhost:8080/h2-console
-```
-
-## Features
-
-* borrow books in libary
-* return books to library
-
-## Rest documentation
-*  [Address entity](/restApiDocs/address.md)
-*   [Author entity](/restApiDocs/author.md)
-*  [Book entity](/restApiDocs/book.md)
-*  [Customer entity](/restApiDocs/customer.md)
-*  [Librarian entity](/restApiDocs/librarian.md)
-*  [Loan entity](/restApiDocs/loan.md)
-*  [Publisher entity](/restApiDocs/publisher.md)
-
-
-
-
