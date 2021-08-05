@@ -1,0 +1,90 @@
+<!-- Strona html dla komponentu który daje możliwość dodania nowego eventu -->
+
+<div class="main-content" style="height: 20%; width: 100%;">
+  <div class="container h-100" id="main-container">
+    <div class="row h-100">
+      <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+        <div class="d-table-cell align-middle">
+
+          <div class="text-center mt-4">
+            <h1 class="h2" id="h2">Add event</h1>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="m-sm-4">
+                <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+                  <div formGroupName="addEventForm">
+                    <div class="form-group">
+                      <label>Event name</label>
+                      <input class="form-control form-control-lg" type="text" formControlName="name" name="name"
+                        id="name" placeholder="Event name" required>
+                      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                        Event name is required!
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Category</label>
+                      <select formControlName="idCategory" name="idCategory" id="idCategory" class="form-control"
+                        required>
+                        <option *ngFor="let category of categories" value={{category?.id}}>{{category?.name}}</option>
+                      </select>
+                      <div *ngIf="idCategory.invalid && (idCategory.dirty || idCategory.touched)" class="alert alert-danger">
+                        Category is required!
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Places</label>
+                      <input class="form-control form-control-lg" type="number" formControlName="places" name="places"
+                        id="places" placeholder="Places" required>
+                      <div *ngIf="places.invalid && (places.dirty || places.touched)" class="alert alert-danger">
+                        Field places is required
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Available places</label>
+                      <input class="form-control form-control-lg" type="number" formControlName="availablePlaces"
+                        name="availablePlaces" id="availablePlaces" placeholder="Available places" required>
+                      <div *ngIf="availablePlaces.invalid && (availablePlaces.dirty || availablePlaces.touched)" class="alert alert-danger">
+                        Field available places is required!
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Date</label>
+                      <input class="form-control form-control-lg" type="date"  formControlName="date" name="date"
+                        id="date" required>
+                      <div *ngIf="date.invalid && (date.dirty || date.touched)" class="alert alert-danger">
+                        Field date is required!
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Description</label>
+                      <input class="form-control form-control-lg" type="text" formControlName="description"
+                        name="description" id="description" placeholder="Description">
+                      <div *ngIf="description.invalid && (description.dirty || description.touched)" class="alert alert-danger">
+                        Field description is required!
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Total cost</label>
+                      <input class="form-control form-control-lg" type="number" formControlName="totalCost"
+                        name="totalCost" id="totalCost" placeholder="0">
+                      <div *ngIf="totalCost.invalid && (totalCost.dirty || totalCost.touched)" class="alert alert-danger">
+                        Field total cost is required!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <a routerLink="/eventList"><button type="button" id="add-event-form" class="btn btn-secondary"
+                        data-dismiss="modal">Close</button></a>
+                    <button [disabled]="addEventForm.invalid" type="submit" class="btn btn-primary">Add event</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

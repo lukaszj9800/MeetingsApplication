@@ -1,0 +1,52 @@
+<!-- html dla komponentu przedstawiąjącego formularz do edycji wybranego eventu. -->
+<div class="main-content">
+  <div id="main-container">
+    <form #addForm="ngForm" (ngSubmit)="onUpdateEvent(addForm)">
+      <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <input type="hidden" [(ngModel)]="idOwner" name="idOwner" class="form-control" id="idOwner">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <input type="hidden" [(ngModel)]="id" name="id" class="form-control" id="id">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Category</label>
+        <div class="col-sm-10">
+          <select ngModel name="idCategory" id="idCategory" class="form-control" required>
+            <option *ngFor="let category of categories" value={{category?.id}}>{{category?.name}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Date</label>
+        <div class="col-sm-10">
+          <input type="date" [(ngModel)]="date" name="date" class="form-control" id="date" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+          <input type="text" [(ngModel)]="description" name="description" class="form-control" id="description"
+            required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <a routerLink="/eventList"><button type="button" id="add-event-form" class="btn btn-secondary"
+              data-dismiss="modal">Close</button></a>
+          <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">Edit event</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+</div>

@@ -1,0 +1,30 @@
+<!-- html przedstawiający pasek nawigacyjny aplikacji -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <div class="media d-flex align-items-center"><img src="../assets/event.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+        <div class="media-body">
+          <a class="navbar-brand" routerLink="/eventList" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">MeetingManager</a>
+        </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <input type="submit" *ngIf="check === 'yes'" class="btn btn-primary" name="openAddEvent" id="openAddEvent" value="Add event" (click)="openAddEvent()">
+          </li>
+          <li class="nav-item">
+            <input type="submit" *ngIf="check === 'yes'" class="btn btn-primary" name="openUserEvent" id="openUserEvent" value="My events" (click)="openUserEvent()">
+          </li>
+          <li class="nav-item">
+            <input type="submit" *ngIf="check === 'yes'" class="btn btn-primary" name="openUpdateUser" id="openUpdateUser" value="Config" (click)="openUpdateUser()">
+          </li>
+          <li class="nav-item">
+            <input type="submit" *ngIf="check === 'yes'" class="btn btn-primary" name="doLogout" id="doLogout" value="Logout" (click)="doLogout()">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

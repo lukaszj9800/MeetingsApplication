@@ -1,0 +1,104 @@
+<!-- html dla komponentu odpowiedzialnego za rejestrację nowego użytkownika. -->
+
+<div class="container h-100" id="main-container">
+    <div class="row h-100">
+        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+            <div class="d-table-cell align-middle">
+
+                <div class="text-center mt-4">
+                    <h1 class="h2" id="h2">Registration</h1>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="m-sm-4">
+                            <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+                                <div formGroupName="registerForm">
+                                    <div class="form-group">
+                                        <label>Username</label>
+                                        <input class="form-control form-control-lg" formControlName="username"
+                                            type="text" name="userName" id="userName" placeholder="Username" required>
+                                        <div *ngIf="username.invalid && (username.dirty || username.touched)"
+                                            class="alert alert-danger">
+                                            Username is required!
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input class="form-control form-control-lg" formControlName="password"
+                                            type="password" name="password" id="password" placeholder="Password"
+                                            required>
+                                        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                                            <span *ngIf="password.hasError('required')">Password is required!</span>
+                                            <span *ngIf="password.hasError('minlength')">Password is too short! (min 8 characters)</span>  
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone</label>
+                                        <input class="form-control form-control-lg" formControlName="phone" type="text"
+                                            name="phone" id="phone" placeholder="Phone number" required>
+                                        <div *ngIf="phone.invalid && (phone.dirty || phone.touched)"
+                                            class="alert alert-danger">
+                                            <span *ngIf="phone.hasError('required')">Phone is required!</span>
+                                            <span *ngIf="phone.hasError('minlength')">Phone is too short! (min 9 characters)</span>
+                                            <span *ngIf="phone.hasError('maxlength')">Phone is too long! (max 9 characters)</span>
+                                            <span *ngIf="phone.hasError('pattern')"> Invalid characters!</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input class="form-control form-control-lg" formControlName="email" type="email"
+                                            name="email" id="email" placeholder="Email" required>
+                                        <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                                            class="alert alert-danger">
+                                            <span *ngIf="email.hasError('required')">Email is required!</span>
+                                            <span *ngIf="email.hasError('email')">This is not an email (example: abc@poczta.pl)</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Firstname</label>
+                                        <input class="form-control form-control-lg" formControlName="firstname"
+                                            type="text" name="firstname" id="firstname" placeholder="Firstname"
+                                            required>
+                                        <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)"
+                                            class="alert alert-danger">
+                                            <span *ngIf="firstname.hasError('required')">Firstname is required!</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Lastname</label>
+                                        <input class="form-control form-control-lg" formControlName="lastname"
+                                            type="text" name="lastname" id="lastname" placeholder="Lastname" required>
+                                        <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)"
+                                            class="alert alert-danger">
+                                            <span *ngIf="lastname.hasError('required')">Lastname is required!</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+                                        <div class="col-sm-10">
+                                            <select name="gender" formControlName="gender" id="gender"
+                                                class="form-control" required>
+                                                <option *ngFor="let g of genderNames" [ngValue]="g">{{g}}</option>
+                                               
+                                            </select>
+                                            <div *ngIf="gender.invalid && (gender.dirty || gender.touched)"
+                                                class="alert alert-danger">
+                                                Gender is required!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a routerLink="/login"><button type="button" id="add-user-form"
+                                            class="btn btn-secondary" data-dismiss="modal">Back</button></a>
+                                    <button type="submit" class="btn btn-primary">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
