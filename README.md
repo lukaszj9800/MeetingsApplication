@@ -10,10 +10,10 @@ Meetings full stack application created by using Spring and Angular. It allows l
 
 # Main page
 ## Features
-* Search field to find book by name
-* Add book to cart
-* Click on book to see details
-<img src = "https://github.com/DominikGazda/LibraryApp/blob/master/images/main.png" />
+* Click on "My events" to view the events of the currently logged in user
+* Add a new event by the logged in user
+* Click on available event to see details
+<img src = "https://github.com/lukaszj9800/MeetingsApplication/blob/main/images/main_page.png" />
 
 # Book details page
 <img src = "https://github.com/DominikGazda/LibraryApp/blob/master/images/book-details.png" />
