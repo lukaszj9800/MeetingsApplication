@@ -1,11 +1,11 @@
-# EngineeringProject
-#### Meetings application covered by tests
+# MeetingsApplication
+#### Meetings application created for a project during college.
 
 ## General info
 Meetings full stack application created by using Spring and Angular. It allows logged in user to chceck and join to available events and to create their own events.
 
 # Login page
-
+<img src = "https://github.com/DominikGazda/LibraryApp/blob/master/images/main.png" />
 
 
 # Main page
