@@ -7,6 +7,8 @@ Meetings full stack application created by using Spring and Angular. It allows l
 # Login page
 <img src = "https://github.com/lukaszj9800/MeetingsApplication/blob/main/images/login_page.png" />
 
+# Registration page
+<img src = "https://github.com/lukaszj9800/MeetingsApplication/blob/main/images/registration_page.png" />
 
 # Main page
 ## Features
@@ -19,7 +21,7 @@ Meetings full stack application created by using Spring and Angular. It allows l
 # Event details page
 <img src = "https://github.com/lukaszj9800/MeetingsApplication/blob/main/images/events_details_page.png" />
 
-# Author page
+# A
 ## Features
 * Show books assigned to  author
 * Show author list
