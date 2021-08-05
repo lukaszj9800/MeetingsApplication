@@ -21,17 +21,16 @@ Meetings full stack application created by using Spring and Angular. It allows l
 # Event details page
 <img src = "https://github.com/lukaszj9800/MeetingsApplication/blob/main/images/events_details_page.png" />
 
+# Event members page
+<img src = "https://github.com/lukaszj9800/MeetingsApplication/blob/main/images/event_members_page.png" />
+
 # Create new event page
 <img src = "https://github.com/lukaszj9800/MeetingsApplication/blob/main/images/create_event_page.png" />
 
-# Cart page
+# Config page
 ## Features
-* Show books in cart
-* Increase or decrease books quantity in cart
-<img src = "https://github.com/DominikGazda/LibraryApp/blob/master/images/cart-list.png" />
-
-# Checkout page
-<img src = "https://github.com/DominikGazda/LibraryApp/blob/master/images/checkout.png" />
+* Change currently logged in user data
+<img src = "https://github.com/lukaszj9800/MeetingsApplication/blob/main/images/user_config_page.png" />
 	
 ## Technologies
 Project is created with:
