@@ -13,6 +13,7 @@ Meetings full stack application created by using Spring and Angular. It allows l
 * Click on "My events" to view the events of the currently logged in user
 * Add a new event by the logged in user
 * Click on available event to see details
+* Click on "Config" to change currently logged in user data
 <img src = "https://github.com/lukaszj9800/MeetingsApplication/blob/main/images/main_page.png" />
 
 # Book details page
