@@ -42,6 +42,3 @@ Project is created with:
 * Angular CLI version 11.2.0.
 * TypeScript
 * JPA/Hibernate
-* JUnit 5.6.0
-* Mockito 3.4.4
-* H2 Database
