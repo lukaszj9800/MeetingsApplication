@@ -39,6 +39,7 @@ Project is created with:
 * Spring REST
 * Spring/Bean Validation
 * Spring Data
+* Spring Security Basic Authentication
 * Angular CLI version 11.2.0.
 * TypeScript
 * JPA/Hibernate
